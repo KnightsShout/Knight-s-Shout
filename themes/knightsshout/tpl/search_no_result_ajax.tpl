@@ -1,0 +1,1 @@
+<i><?php __('search_no_result'); ?></i>

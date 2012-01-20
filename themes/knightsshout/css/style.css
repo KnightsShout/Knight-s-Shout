@@ -1,0 +1,264 @@
+@font-face {
+  font-family: 'GodOfWar';
+  font-style: normal;
+  font-weight: normal;
+  src: local('GodOfWar'), url('../fonts/GODOFWAR.TTF');
+}
+
+* {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+*:focus {
+    outline: none;
+}
+
+table, img {
+    border: none;
+}
+
+body {
+    font-family: Verdana;
+    font-size: 12px;
+    color: #fff;
+}
+
+input {
+    width: 120px;
+    font-size: 12px;
+    background: #ddd;
+    border: 1px solid #666;
+    padding: 4px;
+}
+
+input:hover {
+    border: 1px solid #333;
+}
+
+input:focus {
+    border: 1px solid #633;
+}
+
+a {
+    text-decoration: none;
+    color: #A33;
+}
+
+#container-top #sub a {
+    color: #fff;
+}
+
+.button-special {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-weight: bold;
+    background: #666;
+    border: 1px solid #333;
+    color: #ddd;
+}
+
+#container {
+    
+}
+
+#container-top {
+    height: 150px;
+    background: #181515;
+    border-bottom: 3px solid #5d1212;
+    box-shadow: 3px 3px 4px #666;
+}
+
+#container-top #sub {
+    width: 1000px;
+    height: 150px;
+}
+
+#main {
+    width: 1000px;
+    margin-top: 8px;
+    color: #333;
+}
+
+#main h1 {
+    font-family: 'GodOfWar';
+    font-size: 29px;
+    color: #333;
+    text-shadow: #333 2px 2px 4px;
+}
+
+#main h2 {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: normal;
+    color: #222;
+}
+
+#main h3 {
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;
+}
+
+#main #intro {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+#main #welcome h1 {
+    font-family: 'GodOfWar', Arial;
+    font-size: 33px;
+    font-weight: bold;
+    color: #222;
+    text-shadow: 2px 2px 1px #666;
+}
+
+.spacer {
+    height: 15px;
+}
+
+.parter {
+    width: 60%;
+    border-bottom: 1px dotted #666;
+}
+
+#footer {
+    /* background: #181515; */
+    border-top: 3px solid #5d1212;
+}
+
+#footer-sub {
+    width: 1000px;
+    color: #fff;
+    font-size: 11px;
+    /* font-style: italic; */
+    padding: 7px;
+}
+
+#footer-sub a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#container-registration {
+    background-image: url(../img/reg-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.registration-step {
+    display: none;
+}
+
+.reg-step-box-highlight {
+    width: 120px;
+    height: 50px;
+    background: #333;
+    color: #fff;
+}
+
+#reg-highlight {
+    font-family: 'GodOfWar';
+    font-size: 29px;
+    color: #fff;
+    text-shadow: #aaa 2px 2px 4px;
+    padding-bottom: 18px;
+}
+
+.reg-step-box {
+    width: 120px;
+    height: 50px;
+    background: #ddd;
+}
+
+
+#reg-step-box-no1 {
+    border-top: 2px solid #5d1212;
+    border-bottom: 2px solid #5d1212;
+    border-left: 2px solid #5d1212;
+    border-right: 1px dashed #5d1212;
+}
+
+#reg-step-box-no2 {
+    border-top: 2px solid #5d1212;
+    border-bottom: 2px solid #5d1212;
+    border-left: 1px dashed #5d1212;
+    border-right: 1px dashed #5d1212;
+}
+
+#reg-step-box-no3 {
+    border-top: 2px solid #5d1212;
+    border-bottom: 2px solid #5d1212;
+    border-left: 1px dashed #5d1212;
+    border-right: 2px solid #5d1212;
+}
+
+.reg-table h2 {
+    padding-top: 9px;
+}
+
+.reg-table h3 {
+    padding-top: 6px;
+}
+
+.success {
+    padding: 10px;
+    background: #aca;
+    border: 1px solid #0a0;
+    color: #000;
+}
+
+.error {
+    padding: 10px;
+    background: #caa;
+    border: 1px solid #f00;
+    color: #000;
+}
+
+.loading {
+    padding: 10px;
+    background: #dca;
+    border: 1px solid #da0;
+    color: #000;
+}
+
+.button-special-proceed {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-weight: bold;
+    background: #666;
+    border: 1px solid #333;
+    color: #ddd;
+}
+
+.reg-server-single-section {
+    height: 100px;
+}
+
+.reg-server-single {
+    position: relative;
+    display: block;
+    border-top: 1px dashed #333;
+}
+
+#container-validation {
+    height: 512px;
+    background-image: url(../img/validate-bg.jpg);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+#forgot-pw-section {
+    width: 1000px;
+    height: 500px;
+    background-image: url(../img/fp-bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+}

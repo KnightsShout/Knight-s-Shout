@@ -1,0 +1,123 @@
+
+delimiter $$
+
+CREATE TABLE `BLOG_POSTS` (
+  `nID` int(11) NOT NULL AUTO_INCREMENT,
+  `nCategory` int(11) NOT NULL,
+  `strTitle` varchar(100) NOT NULL,
+  `strContent` varchar(20000) NOT NULL,
+  `strAuthor` varchar(35) NOT NULL,
+  `nTime` int(11) NOT NULL DEFAULT '0',
+  `strDate` varchar(100) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`nID`),
+  FULLTEXT KEY `FULLTEXT` (`strTitle`,`strContent`)
+) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `FEEDS` (
+  `nTime` int(11) NOT NULL,
+  `strAccount` varchar(55) NOT NULL,
+  `nType` smallint(6) NOT NULL,
+  `data` text,
+  `strMessage` text,
+  `FEED` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`FEED`,`nTime`,`strAccount`)
+) ENGINE=MyISAM AUTO_INCREMENT=111 DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `FRIENDSHIPS` (
+  `nFriendship` int(11) NOT NULL AUTO_INCREMENT,
+  `nDate` int(11) NOT NULL,
+  `nStatus` tinyint(4) NOT NULL,
+  `strRequester` varchar(55) NOT NULL,
+  `strAsked` varchar(55) NOT NULL,
+  PRIMARY KEY (`nFriendship`)
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `MEMBERS` (
+  `nMember` int(11) NOT NULL AUTO_INCREMENT,
+  `strAccountID` varchar(55) NOT NULL,
+  `strPasswd` varchar(55) NOT NULL,
+  `strEMail` varchar(55) NOT NULL,
+  `nSecretQuestion` int(11) NOT NULL,
+  `strSecretAnswer` varchar(55) NOT NULL,
+  `strClientIP` varchar(15) DEFAULT NULL,
+  `nJoined` int(11) NOT NULL,
+  `nLastSeen` int(11) NOT NULL,
+  `nFavoriteClass` int(11) NOT NULL,
+  `nAuthority` int(11) NOT NULL DEFAULT '1',
+  `strAvatar` varchar(100) DEFAULT NULL,
+  `strFPKey` varchar(96) DEFAULT NULL,
+  PRIMARY KEY (`nMember`,`strAccountID`,`strEMail`)
+) ENGINE=MyISAM AUTO_INCREMENT=76 DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `MEMBERS_SERVERS` (
+  `nPK` int(11) NOT NULL AUTO_INCREMENT,
+  `strAccountID` varchar(21) NOT NULL,
+  `strServerID` varchar(21) NOT NULL,
+  `strCharID` varchar(35) NOT NULL,
+  `nCharNation` int(11) NOT NULL,
+  `nCharClass` int(11) NOT NULL,
+  `strClanID` varchar(55) DEFAULT NULL,
+  `bActive` tinyint(4) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`nPK`)
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `NOTIFICATIONS` (
+  `NOTIFICATIONS` int(11) NOT NULL AUTO_INCREMENT,
+  `strAccountID` varchar(55) NOT NULL,
+  `nType` smallint(6) NOT NULL,
+  `data` text,
+  `nStatus` smallint(6) NOT NULL,
+  `nTime` int(11) NOT NULL,
+  PRIMARY KEY (`NOTIFICATIONS`)
+) ENGINE=MyISAM AUTO_INCREMENT=144 DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `PHOTOS` (
+  `idPHOTOS` int(11) NOT NULL AUTO_INCREMENT,
+  `nType` tinyint(4) NOT NULL,
+  `nIsStandart` tinyint(4) DEFAULT NULL,
+  `strOwner` varchar(45) NOT NULL,
+  `tDescription` text,
+  `strResource` text,
+  `dDate` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idPHOTOS`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `PHOTO_ALBUMS` (
+  `idPHOTO_ALBUMS` int(11) NOT NULL AUTO_INCREMENT,
+  `nType` tinyint(4) NOT NULL,
+  `nIsStandart` tinyint(4) DEFAULT NULL,
+  `strCreator` varchar(45) NOT NULL,
+  `tAlbumName` text,
+  `dDate` varchar(45) NOT NULL,
+  PRIMARY KEY (`idPHOTO_ALBUMS`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `SERVERS` (
+  `idSERVERS` int(11) NOT NULL AUTO_INCREMENT,
+  `tName` text NOT NULL,
+  `tAliases` text,
+  `tOwners` text NOT NULL,
+  `tGameMasters` text,
+  `nEnableForum` smallint(6) DEFAULT '1',
+  `nType` smallint(6) DEFAULT NULL,
+  `tDescription` text,
+  `tKeywords` text,
+  PRIMARY KEY (`idSERVERS`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1$$
+

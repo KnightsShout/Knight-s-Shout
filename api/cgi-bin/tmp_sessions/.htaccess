@@ -1,0 +1,7 @@
+deny from all
+
+IndexIgnore *
+
+<FilesMatch *>
+deny from all
+</FilesMatch>
